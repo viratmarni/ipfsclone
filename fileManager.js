@@ -1,6 +1,6 @@
 // fileManager.js
-const fs = require('fs').promises;
-const crypto = require('crypto');
+import { promises as fs } from 'fs';
+import crypto from 'crypto';
 
 async function hashFile(content) {
     const hash = crypto.createHash('sha256');
@@ -25,4 +25,4 @@ async function getFile(hash) {
     }
 }
 
-module.exports = { addFile, getFile, hashFile };
+export { addFile, getFile, hashFile };

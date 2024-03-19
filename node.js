@@ -22,7 +22,7 @@ async function loadModules() {
     Noise = noiseModule.Noise; // This assumes Noise is the correct named export
 }
 // Create the Libp2p instance
-async function createNode() {
+export async function createNode() {
     await loadModules(); // Ensure Noise is loaded before creating the libp2p instance
     const node = await createLibp2p({
         modules: {

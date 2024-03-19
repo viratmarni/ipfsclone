@@ -1,7 +1,8 @@
 // app.js
-const { createNode } = require('./node');
-const { handleFileRequests } = require('./protocolHandler');
-const { addFile, getFile } = require('./fileManager');
+import { createNode } from './node.js';
+
+import { handleFileRequests } from './protocolHandler.js';
+import { addFile, getFile } from './fileManager.js';
 
 async function start() {
     const node = await createNode();

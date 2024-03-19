@@ -1,6 +1,7 @@
 // protocolHandler.js
-const { pipe } = require('it-pipe');
-const { collect } = require('streaming-iterables');
+import { pipe } from 'it-pipe';
+
+import { collect } from 'streaming-iterables';
 
 async function handleFileRequests(node, getFile) {
     node.handle('/file-protocol/1.0.0', async ({ stream }) => {
@@ -20,4 +21,5 @@ async function handleFileRequests(node, getFile) {
     });
 }
 
-module.exports = { handleFileRequests };
+export { handleFileRequests };
+
