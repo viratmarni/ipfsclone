@@ -44,9 +44,10 @@ export async function createNode() {
         }
     });
 
-    // node.on('peer:discovery', (peerId) => {
-    //     console.log(`Discovered peer ${peerId.toB58String()}`);
-    // });
+    node.addEventListener('peer:discovery', (peerId) => {
+        console.log(`Discovered peer ${peerId.toB58String()}`);
+    });
+    
     await node.start();
     return node;
 }
